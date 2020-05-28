@@ -24,7 +24,6 @@
 		<script src="javascript/chui-3.9.2.min.js" type="text/javascript"></script>
 
 		<link href="styles/reset.css" rel="stylesheet" type="text/css">
-		<link href="styles/styles.css" rel="stylesheet" type="text/css">
 		<link href="styles/chui-ios-3.9.2.css" rel="stylesheet" type="text/css">
 
 	</head>
@@ -34,18 +33,17 @@
 
 	<article id="locale" class="current">
 			<section>
-				<ul class="list">
-					<li class='comp' >
+
 						<div style="text-align: center">
-							<h2>GTimes</h2>
+							<h1>GTimes</h1>
 							<p>by</p>
-							<img title='GTimes' src="bilder/logo.png" height="80px">
+							<h2></h2>
+							<input type='image' id='touchLocal' class='show-detail' src='bilder/logo.png' height='80px'></button>
 						</div>
-						<aside>
-							<button id='touchLocal' class='show-detail'></button>
-						</aside>
-				</li>
-				</ul>
+
+
+
+
 
 				</section>
 		</article>
@@ -66,7 +64,7 @@
 				  window.applicationCache.addEventListener('updateready', function(e) {
 					if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
 					  window.applicationCache.swapCache();
-					  updatePopup('Update', 'Eine neue Version ist verf?gbar.<br>Soll diese jetzt heruntergeladen werden?');
+
 					}
 				  }, false);
 				}, false);
@@ -85,16 +83,10 @@
 				var isChrome = !!window.chrome && !!window.chrome.webstore;
 					// Blink engine detection
 				var isBlink = (isChrome || isOpera) && !!window.CSS;
-				//alert('userAgent'+isOpera+","+isFirefox+","+isSafari+","+isIE+","+isEdge+","+isChrome+","+isBlink);
-				if(isSafari==true){
-					cssNachladen("ios");
-				}else if(isChrome==true || isFirefox==true){
-					cssNachladen("android");
-				}else if(isIE==true || isEdge==true){
-					cssNachladen("win");
-				}else{
 
-				}
+				//alert('userAgent'+isOpera+","+isFirefox+","+isSafari+","+isIE+","+isEdge+","+isChrome+","+isBlink);
+
+				cssNachladen("ios");
 			};
 
 

@@ -18,7 +18,6 @@ var filesToCache = [
   'styles/geopp-ios.css',
   'styles/geopp-win.css',
   'styles/reset.css',
-  'styles/styles.css',
   'bilder/favicon.ico',
   'bilder/logo.png',
   'bilder/touch-icon-iphone.png',

@@ -368,8 +368,8 @@ html[dir=rtl] .toolbar > button.align-flush {
    Nav Bars
    =========================== */
 #global-nav {
-  background-color: #1a375b;
-  border-bottom: solid 1px #a7a7aa;
+ background-color: none;
+    border-bottom: solid 0px #a7a7aa;
   overflow: hidden;
 }
 nav {
@@ -2706,3 +2706,4 @@ body.isWindows .horizontal-scroll-panel {
     width: 125px !important;
   }
 }
+
