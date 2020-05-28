@@ -32,7 +32,7 @@
 
 	<!--Hauptmenue  -->
 
-<article id="locale" class="current">
+	<article id="locale" class="current">
 			<section>
 				<ul class="list">
 					<li class='comp' >
@@ -96,7 +96,14 @@
 
 				}
 			};
-			window.setTimeout('window.location = "https://gnsmart.com/gtimes"',3000);
+
+
+
+			    document.getElementById("touchLocal").onclick = function () {
+			        location.href = "https://gnsmart.com/gtimes";
+			    };
+
+
 		</script>
 	</body>
 </html>
