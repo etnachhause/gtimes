@@ -3,6 +3,7 @@
   "short_name": "GTimes",
   "description": "my first PWA",
   "start_url": "index.html",
+  "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
   "lang": "de-de",

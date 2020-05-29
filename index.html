@@ -5,7 +5,6 @@
 		<title>gtimes</title>
   		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<!-- iOS WebApp Metatags -->
 		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=0">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" >
@@ -13,44 +12,22 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 		<meta name="mobile-web-app-capable" content="yes">
 
-		<!-- Homescreen Icons f?r iOS und Android -->
-
 		<link rel="apple-touch-icon"  href="bilder/touch-icon-iphone_144.png">
-
 		<link rel="icon" type="image/x-icon" href="bilder/favicon.ico">
   		<link rel="manifest" href="manifest.json">
 
-		<script src="javascript/jquery-2.2.0.min.js" type="text/javascript"></script>
-		<script src="javascript/chui-3.9.2.min.js" type="text/javascript"></script>
-
-		<link href="styles/reset.css" rel="stylesheet" type="text/css">
-		<link href="styles/chui-ios-3.9.2.css" rel="stylesheet" type="text/css">
-
 	</head>
 	<body>
+		<center>
+			<div style="text-align: center">
+				<h1>GTimes</h1>
+				<p>by</p>
+				<h2></h2>
+				<input type='image' id='touchLocal' class='show-detail' src='bilder/logo_geopp.png' height='80px' align='middle'></button>
+			</div>
+		</center>
 
-	<!--Hauptmenue  -->
-
-	<article id="locale" class="current">
-			<section>
-
-						<div style="text-align: center">
-							<h1>GTimes</h1>
-							<p>by</p>
-							<h2></h2>
-							<input type='image' id='touchLocal' class='show-detail' src='bilder/logo.png' height='80px'></button>
-						</div>
-
-
-
-
-
-				</section>
-		</article>
-
-
-
- 	<script>
+		<script>
    			if ('serviceWorker' in navigator) {
 			  navigator.serviceWorker.register('service-worker.js').then(function(registration) {
 			   }
@@ -58,44 +35,9 @@
 			    alert( 'ServiceWorker wurde leider nicht registriert.', err);
 			 });
 			}
-
-			window.onload = function() {
-				window.addEventListener('load', function(e) {
-				  window.applicationCache.addEventListener('updateready', function(e) {
-					if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
-					  window.applicationCache.swapCache();
-
-					}
-				  }, false);
-				}, false);
-
-					// Opera 8.0+
-				var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-					// Firefox 1.0+
-				var isFirefox = typeof InstallTrigger !== 'undefined';
-					// At least Safari 3+: "[object HTMLElementConstructor]"
-				var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
-					// Internet Explorer 6-11
-				var isIE = /*@cc_on!@*/false || !!document.documentMode;
-					// Edge 20+
-				var isEdge = !isIE && !!window.StyleMedia;
-					// Chrome 1+
-				var isChrome = !!window.chrome && !!window.chrome.webstore;
-					// Blink engine detection
-				var isBlink = (isChrome || isOpera) && !!window.CSS;
-
-				//alert('userAgent'+isOpera+","+isFirefox+","+isSafari+","+isIE+","+isEdge+","+isChrome+","+isBlink);
-
-				cssNachladen("ios");
+			document.getElementById("touchLocal").onclick = function () {
+				location.href = "https://gnsmart.com/gtimes";
 			};
-
-
-
-			    document.getElementById("touchLocal").onclick = function () {
-			        location.href = "https://gnsmart.com/gtimes";
-			    };
-
-
 		</script>
 	</body>
 </html>
