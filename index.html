@@ -35,9 +35,13 @@
 			    alert( 'ServiceWorker wurde leider nicht registriert.', err);
 			 });
 			}
-			document.getElementById("touchLocal").onclick = function () {
+			window.onload = function() {
 				window.location.replace("https://gnsmart.com/gtimes");
+
 			};
+			/*document.getElementById("touchLocal").onclick = function () {
+				window.location.replace("https://gnsmart.com/gtimes");
+			};*/
 		</script>
 	</body>
 </html>
